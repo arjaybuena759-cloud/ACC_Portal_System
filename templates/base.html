@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ACC Portal System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            ACC PORTAL
+        </div>
+
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="#">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+        </nav>
+
+    </header>
+
+    <main class="container">
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+    <footer>
+        <p>© 2026 ACC Portal System</p>
+    </footer>
+
+</body>
+</html>
